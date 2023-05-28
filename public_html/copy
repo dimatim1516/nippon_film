@@ -1,0 +1,10 @@
+function copyLink(e) {
+   let link = e.target.dataset.link;
+   let tmp   = document.createElement('INPUT');
+   tmp.value = link;
+   document.body.appendChild(tmp); 
+   tmp.select(); 
+   document.execCommand('copy'); 
+   document.body.removeChild(tmp);
+   alert('Ссылка ' + link + ' скопирована');
+}
